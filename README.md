@@ -8,3 +8,4 @@ Feel free to git clone and run the app.
 For more details and explanations on the ML and android part, take at look at my article : 
 https://hackernoon.com/from-tf-to-tflite-deploying-ml-models-on-mobile-part-1-8dl3uqg
 
+![](app.gif)
