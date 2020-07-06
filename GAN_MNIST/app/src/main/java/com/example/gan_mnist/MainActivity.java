@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     Bitmap image;
 
 
-
     @Override
     protected  void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,17 +36,17 @@ public class MainActivity extends AppCompatActivity {
         generate_btn=findViewById(R.id.generate);
         Prediction_view=findViewById(R.id.result);
 
+        //Create objects of classes
         final GAN gan=new GAN(this);
         final MnistClassifier classify=new MnistClassifier(this);
-
 
         generate_btn.setOnClickListener(new View.OnClickListener() {
 
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
-                gan.Load_Gan_model();
-                image=gan.Generate_Image();
+                gan.loadGanModel();
+                image=gan.generateImage();
                 Gan_image.setImageBitmap(Bitmap.createScaledBitmap(image,300,300,false));
             }
         });
@@ -55,13 +54,12 @@ public class MainActivity extends AppCompatActivity {
         predict_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                classify.Load_Mnist_model();
-                ByteBuffer mnist_input=classify.Process(image);
+                classify.loadMnistModel();
+                ByteBuffer mnist_input=classify.GetInput(image);
                 float result=classify.Classify(mnist_input);
-                Prediction_view.setText(String.valueOf(result));
+                Prediction_view.setText(String.valueOf(( result)));
             }
         });
-
     }
 
 

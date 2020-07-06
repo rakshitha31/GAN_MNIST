@@ -40,6 +40,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="10dp"
+            android:backgroundTint="#24a0ed"
+            android:shadowColor="#000"
             android:layout_weight="1"
             android:text="Generate" />
 
@@ -50,6 +52,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
+            android:backgroundTint="#64ad6a"
+            android:hapticFeedbackEnabled="true"
+            android:shadowRadius="10"
             android:text="Predict" />
     </LinearLayout>
     <LinearLayout
@@ -58,18 +63,29 @@
         android:baselineAligned="false"
         android:layout_marginTop="30dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prediction : "
-        android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Prediction"
+            android:padding="10dp"
+            android:background="@color/cardview_dark_background"
+            android:textColor="#fff"
+            android:layout_marginRight="2dp"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/result"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="" />
+            android:background="@color/cardview_dark_background"
+            android:gravity="center"
+
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="18sp" />
     </LinearLayout>
 
 
