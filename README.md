@@ -5,7 +5,8 @@ This is a demo app with two TfLite ML models:
 
 Feel free to git clone and run the app. 
 
-For more details and explanations on the ML and android part, take at look at my article : 
-https://hackernoon.com/from-tf-to-tflite-deploying-ml-models-on-mobile-part-1-8dl3uqg
+For more details and explanations on the ML part, take at look at my article : 
+Part1 : https://hackernoon.com/from-tf-to-tflite-deploying-ml-models-on-mobile-part-1-8dl3uqg
+Part 2: https://hackernoon.com/from-tf-to-tflite-deploying-ml-models-on-mobile-part-2-4cl3uaz
 
 ![](app.gif)
